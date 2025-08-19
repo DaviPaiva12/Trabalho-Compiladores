@@ -9,8 +9,6 @@ Este projeto foi desenvolvido para a disciplina de Compiladores e segue a Modali
 
 ## Recursos Implementados
 
-O compilador atende a todos os requisitos mínimos para a modalidade, que incluem:
-
 -   **Expressões Matemáticas**: Suporte completo a operações de `+`, `-`, `*`, `/`, respeitando a precedência matemática correta.
 -   **Números Decimais**: Capacidade de processar e calcular com números de ponto flutuante (reais).
 -   **Variáveis**: Permite a declaração e atribuição de variáveis.
@@ -19,8 +17,6 @@ O compilador atende a todos os requisitos mínimos para a modalidade, que inclue
 -   **Feedback ao Usuário**: Retorna o valor calculado em caso de sucesso ou uma mensagem de erro explicativa para erros de sintaxe ou semântica.
 
 ## Gramática e Tokens
-
-A gramática utilizada foi projetada para não conter recursividade à esquerda, conforme solicitado nas instruções.
 
 ### Gramática
 - `prog: (comando SEMI)* comando? EOF;`
@@ -44,7 +40,6 @@ A gramática utilizada foi projetada para não conter recursividade à esquerda,
 Siga os passos abaixo para configurar o ambiente e executar o compilador.
 
 ### Pré-requisitos
-Antes de começar, garanta que você tenha instalado:
 -   Python 3
 -   Java Development Kit (JDK) (versão 8 ou superior)
 
