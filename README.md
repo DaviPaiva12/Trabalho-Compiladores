@@ -1,29 +1,23 @@
 Trabalho de Compiladores: Calculadora Simples
 Nome: Davi Nunes de Paiva
-Ra: 11202231636
 
-O desenvolvimento segue a Modalidade Individual, cujo objetivo é a criação de uma calculadora simples. A ferramenta principal utilizada para a análise sintática foi o ANTLR, e a linguagem de programação do interpretador é Python.
+RA: 11202231636
 
-
+Visão Geral
+Este projeto foi desenvolvido para a disciplina de Compiladores e segue a Modalidade Individual, cujo objetivo é a criação de uma calculadora simples. A ferramenta principal utilizada para a análise sintática foi o ANTLR, e a linguagem de programação do interpretador é Python.
 
 Recursos Implementados
 O compilador atende a todos os requisitos mínimos para a modalidade, que incluem:
 
-
 Expressões Matemáticas: Suporte completo a operações de +, -, *, /, respeitando a precedência matemática correta.
-
 
 Números Decimais: Capacidade de processar e calcular com números de ponto flutuante (reais).
 
-
 Variáveis: Permite a declaração e atribuição de variáveis.
 
-
-Verificação de Declaração: O compilador verifica se uma variável foi declarada antes de ser utilizada em qualquer expressão ou atribuição.
-
+Verificação de Declaração: O compilador verifica se uma variável foi declarada antes de ser utilizada.
 
 Estrutura de Controle: Implementação da estrutura condicional if ... then ... else.
-
 
 Feedback ao Usuário: Retorna o valor calculado em caso de sucesso ou uma mensagem de erro explicativa para erros de sintaxe ou semântica.
 
@@ -34,43 +28,34 @@ Gramática
 Snippet de código
 
 prog: (comando SEMI)* comando? EOF;
-
 comando: declaracao | atribuicao | estruturaIf | expressao;
-
 declaracao: VAR ID;
-
 atribuicao: ID ASSIGN expressao;
-
 estruturaIf: IF comparacao THEN comando (ELSE comando)?;
-
 comparacao: expressao REL_OP expressao;
-
 expressao: termo ( (PLUS | MINUS) termo )*;
-
 termo:     fator ( (MUL | DIV) fator )*;
-
 fator:     NUMBER | ID | LPAREN expressao RPAREN;
 Tokens Principais
-Palavras-Chave: var, if, then, else.
+Categoria	Tokens
+Palavras-Chave	var, if, then, else
+Operadores	=, +, -, *, /, <, >, ==, !=, <=, >=
+Literais e ID	NUMBER (números), ID (variáveis)
+Símbolos	(, ), ;
 
-Operadores: =, +, -, *, /, <, >, ==, !=, <=, >=.
-
-Literais e ID: NUMBER (números), ID (variáveis).
-
-Símbolos: (, ), ;.
-
+Exportar para as Planilhas
 Tutorial de Utilização
 Siga os passos abaixo para configurar o ambiente e executar o compilador.
 
-1. Pré-requisitos
+Pré-requisitos
 Antes de começar, garanta que você tenha instalado:
 
 Python 3
 
 Java Development Kit (JDK) (versão 8 ou superior)
 
-2. Configuração do Ambiente
-Clone ou Baixe o Repositório: Certifique-se de que todos os arquivos do projeto (Calculator.g4, EvalVisitor.py, etc.) estejam em uma mesma pasta.
+Configuração do Ambiente
+Clone ou Baixe o Repositório: Certifique-se de que todos os arquivos do projeto estejam em uma mesma pasta.
 
 Baixe o ANTLR: Faça o download do arquivo antlr-4.x.x-complete.jar do site oficial do ANTLR e coloque-o na pasta do projeto.
 
@@ -83,26 +68,24 @@ Gere o Parser: Ainda no terminal, execute o comando abaixo para que o ANTLR gere
 
 Bash
 
-java -jar antlr-4.13.1-complete.jar -Dlanguage=Python3 Calculator.g4 -visitor
-3. Execução do Compilador
+java -jar antlr-4.13.1-complete.jar -Dlanguage=Python3 grammar/Calculator.g4 -visitor
+Execução do Compilador
 Com o ambiente configurado, execute o script principal para iniciar a calculadora interativa:
 
 Bash
 
-python main_antlr.py
+py -m src.Main
 O programa exibirá um prompt >> aguardando seus comandos. Para encerrar, digite sair.
 
 Exemplos de Uso
-A seguir, alguns exemplos de comandos que podem ser executados.
-
 Operações Matemáticas
 PowerShell
 
 >> 10 + 2 * 5
 Resultado: 20.0
 
->> (10 + 2) * 5
-Resultado: 30.0
+>> (10 + 2) * 3
+Resultado: 36.0
 
 >> 15 / 2
 Resultado: 7.5
