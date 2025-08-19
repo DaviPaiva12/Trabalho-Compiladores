@@ -77,6 +77,7 @@ Resultado: 7.5
 ```
 
 #### Uso de Variáveis
+
 ```
 >> var x;
 Resultado: Variável 'x' declarada.
@@ -90,9 +91,7 @@ Resultado: 51.0
 
 ### Estrutura if-then-else
 
-```markdown
-#### Estrutura if-then-else
-```powershell
+```
 >> var nota;
 Resultado: Variável 'nota' declarada.
 
@@ -105,9 +104,7 @@ Resultado: 1.0
 
 ### Tratamento de Erros
 
-```markdown
-#### Tratamento de Erros
-```powershell
+```
 >> y = 50
 Erro: Variável 'y' não foi declarada.
 
