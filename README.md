@@ -32,3 +32,35 @@ A gramática utilizada foi projetada para não conter recursividade à esquerda,
 - `expressao: termo ( (PLUS | MINUS) termo )*;`
 - `termo: fator ( (MUL | DIV) fator )*;`
 - `fator: NUMBER | ID | LPAREN expressao RPAREN;`
+
+### Tokens Principais
+-   `Palavras-Chave`: `var`, `if`, `then`, `else`
+-   `Operadores`: `=`, `+`, `-`, `*`, `/`, `<`, `>`, `==`, `!=`, `<=`, `>=`
+-   `Literais e ID`: `NUMBER` (números), `ID` (variáveis)
+-   `Símbolos`: `(`, `)`, `;`
+
+## Tutorial de Utilização
+
+Siga os passos abaixo para configurar o ambiente e executar o compilador.
+
+### Pré-requisitos
+Antes de começar, garanta que você tenha instalado:
+-   Python 3
+-   Java Development Kit (JDK) (versão 8 ou superior)
+
+### Configuração do Ambiente
+1.  **Clone ou Baixe o Repositório**: Certifique-se de que todos os arquivos do projeto estejam em uma mesma pasta.
+2.  **Baixe o ANTLR**: Faça o download do arquivo `antlr-4.x.x-complete.jar` do [site oficial do ANTLR](https://www.antlr.org/download.html) e coloque-o na pasta do projeto.
+3.  **Instale o Runtime do ANTLR para Python**: Abra um terminal na pasta do projeto e execute:
+    ```bash
+    pip install antlr4-python3-runtime
+    ```
+4.  **Gere o Parser**: Ainda no terminal, execute o comando abaixo. Lembre-se de ajustar o nome do arquivo `.jar` para a versão que você baixou.
+    ```bash
+    java -jar antlr-4.13.1-complete.jar -Dlanguage=Python3 grammar/Calculator.g4 -visitor
+    ```
+
+### Execução do Compilador
+Com o ambiente configurado, execute o script principal para iniciar a calculadora interativa:
+```bash
+py -m src.Main
