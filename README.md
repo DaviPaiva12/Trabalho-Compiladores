@@ -23,14 +23,12 @@ O compilador atende a todos os requisitos mínimos para a modalidade, que inclue
 A gramática utilizada foi projetada para não conter recursividade à esquerda, conforme solicitado nas instruções.
 
 ### Gramática
-```antlr
-prog: (comando SEMI)* comando? EOF;
-comando: declaracao | atribuicao | estruturaIf | expressao;
-declaracao: VAR ID;
-atribuicao: ID ASSIGN expressao;
-estruturaIf: IF comparacao THEN comando (ELSE comando)?;
-comparacao: expressao REL_OP expressao;
-expressao: termo ( (PLUS | MINUS) termo )*;
-termo:     fator ( (MUL | DIV) fator )*;
-fator:     NUMBER | ID | LPAREN expressao RPAREN;
-
+- `prog: (comando SEMI)* comando? EOF;`
+- `comando: declaracao | atribuicao | estruturaIf | expressao;`
+- `declaracao: VAR ID;`
+- `atribuicao: ID ASSIGN expressao;`
+- `estruturaIf: IF comparacao THEN comando (ELSE comando)?;`
+- `comparacao: expressao REL_OP expressao;`
+- `expressao: termo ( (PLUS | MINUS) termo )*;`
+- `termo: fator ( (MUL | DIV) fator )*;`
+- `fator: NUMBER | ID | LPAREN expressao RPAREN;`
