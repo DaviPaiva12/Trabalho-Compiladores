@@ -48,15 +48,70 @@ Siga os passos abaixo para configurar o ambiente e executar o compilador.
 1.  **Clone ou Baixe o Repositório**: Certifique-se de que todos os arquivos do projeto estejam em uma mesma pasta.
 2.  **Baixe o ANTLR**: Faça o download do arquivo `antlr-4.x.x-complete.jar` do [site oficial do ANTLR](https://www.antlr.org/download.html) e coloque-o na pasta do projeto.
 3.  **Instale o Runtime do ANTLR para Python**: Abra um terminal na pasta do projeto e execute:
-    ```bash
+    ```
     pip install antlr4-python3-runtime
     ```
 4.  **Gere o Parser**: Ainda no terminal, execute o comando abaixo. Lembre-se de ajustar o nome do arquivo `.jar` para a versão que você baixou.
-    ```bash
+    ```
     java -jar antlr-4.13.1-complete.jar -Dlanguage=Python3 grammar/Calculator.g4 -visitor
     ```
 
 ### Execução do Compilador
 Com o ambiente configurado, execute o script principal para iniciar a calculadora interativa:
-```bash
+```
 py -m src.Main
+```
+
+## Exemplos de Uso
+
+#### Operações Matemáticas
+```
+>> 10 + 2 * 5
+Resultado: 20.0
+
+>> (10 + 2) * 3
+Resultado: 36.0
+
+>> 15 / 2
+Resultado: 7.5
+```
+
+#### Uso de Variáveis
+```
+>> var x;
+Resultado: Variável 'x' declarada.
+
+>> x = 100 / 4;
+Resultado: 25.0
+
+>> x * 2 + 1
+Resultado: 51.0
+```
+
+### Estrutura if-then-else
+
+```markdown
+#### Estrutura if-then-else
+```powershell
+>> var nota;
+Resultado: Variável 'nota' declarada.
+
+>> nota = 7.5;
+Resultado: 7.5
+
+>> if nota > 7 then 1 else 0
+Resultado: 1.0
+```
+
+### Tratamento de Erros
+
+```markdown
+#### Tratamento de Erros
+```powershell
+>> y = 50
+Erro: Variável 'y' não foi declarada.
+
+>> 10 * (5 +
+line 1:10 missing ')' at '<EOF>'
+Resultado: None
+```
