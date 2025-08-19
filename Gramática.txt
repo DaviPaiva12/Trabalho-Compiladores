@@ -1,0 +1,17 @@
+prog: (comando SEMI)* comando? EOF;
+
+comando: declaracao | atribuicao | estruturaIf | expressao;
+
+declaracao: VAR ID;
+
+atribuicao: ID ASSIGN expressao;
+
+estruturaIf: IF comparacao THEN comando (ELSE comando)?;
+
+comparacao: expressao REL_OP expressao;
+
+expressao: termo ( (PLUS | MINUS) termo )*;
+
+termo:     fator ( (MUL | DIV) fator )*;
+
+fator:     NUMBER | ID | LPAREN expressao RPAREN;

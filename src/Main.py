@@ -2,7 +2,7 @@ import sys
 from antlr4 import *
 from CalculatorLexer import CalculatorLexer
 from CalculatorParser import CalculatorParser
-from Visitor import EvalVisitor
+from .Visitor import EvalVisitor
 
 def main():
     print("Calculadora Simples com ANTLR")
