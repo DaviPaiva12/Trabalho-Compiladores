@@ -158,6 +158,6 @@ Resultado: 1.0
 Erro: Variável 'y' não foi declarada.
 
 >> 10 * (5 +
-line 1:10 missing ')' at '<EOF>'
+line 1:9 no viable alternative at input '10*(5+'
 Resultado: None
 ```
