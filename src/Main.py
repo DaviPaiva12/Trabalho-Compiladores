@@ -6,7 +6,10 @@ from .Visitor import EvalVisitor
 
 def main():
     print("Calculadora Simples com ANTLR")
+    print("Digite a operação desejada")
     print("Digite 'sair' para terminar.")
+
+    visitor = EvalVisitor()
 
     while True:
         try:
@@ -22,7 +25,6 @@ def main():
             parser = CalculatorParser(stream)
             tree = parser.prog()
 
-            visitor = EvalVisitor()
             result = visitor.visit(tree)
             
             print(f"Resultado: {result}")
