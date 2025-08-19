@@ -1,0 +1,18 @@
+Token	            --> Descrição / Exemplo
+Palavras-Chave	
+VAR		            --> A palavra reservada var para declarar variáveis.
+IF		            --> A palavra reservada if para iniciar uma condição.
+THEN		        --> A palavra reservada then após uma condição.
+ELSE		        --> A palavra reservada else para a alternativa de um if.
+Símbolos e Operadores	
+ASSIGN		        --> O operador de atribuição =.
+SEMI		        --> O separador de comandos ; (ponto e vírgula).
+PLUS, MINUS	        --> Os operadores de adição + e subtração -.
+MUL, DIV	        --> Os operadores de multiplicação * e divisão /.
+LPAREN, RPAREN		--> Os parênteses ( e ).
+REL_OP		        --> Operadores relacionais como <, >, ==, !=, <=, >=.
+Literais e Identificadores	
+ID		            --> Um identificador para nomes de variáveis. Ex: x, meu_valor.
+NUMBER		        --> Um número, que pode ser inteiro ou decimal. Ex: 10, 3.14.
+Outros	
+WS		            --> Espaços em branco, tabs e quebras de linha. Este token é ignorado pelo parser.
