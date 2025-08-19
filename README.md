@@ -36,6 +36,7 @@ Este projeto foi desenvolvido para a disciplina de Compiladores e segue a Modali
 -   `Literais e ID`: `NUMBER` (números), `ID` (variáveis)
 -   `Símbolos`: `(`, `)`, `;`
 
+### Gramática ANTLR
 ````
 grammar Calculator;
 
